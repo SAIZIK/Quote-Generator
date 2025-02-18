@@ -1,0 +1,408 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main
+{
+    width: 100%;
+    height: 100vh;
+    background: rgb(60,157,167);
+    background: linear-gradient(0deg, rgb(60, 62, 167) 0%, rgba(18, 31, 46, 0.992) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s;
+}
+.title
+{
+  font-size: 3em;
+  color: #d3fddcb2;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  position: absolute;
+  top: 5%;
+}
+    .quotBox
+    {
+        width: 70%;
+        height: 60%;
+        background-color: #ffffff73;
+        border-radius: 20px;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; */
+        padding:  20px;
+        display: block;
+        /* position: relative; */
+        position: absolute;
+    }
+    .quotBox .textErr
+    {
+      color: red;
+      font-size: 1.1rem;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      display: none;
+      text-align: center;
+    }
+       .quotContent
+       {
+        width: 95%;
+        height: 70%;
+        background-color: #072eaf;
+        border-radius: 10px;
+        margin-left: 5;
+        box-shadow: 10px 10px 30px black;
+       }
+          .quotContent p
+          {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          }
+          .quotContent h3
+          {
+            font-size: 20px;
+            text-align: end;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 10px 20px;
+            /* margin-bottom: 10px; */
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          }
+          .quotContent button
+          {
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            border-radius: 50%;
+            display: block;
+            cursor: pointer;
+            /* position: absolute; */
+            /* left: 5%; */
+            /* z-index: 9999; */
+          }
+          .quotContent button:hover
+          {
+            background-color: #e6e6e6;
+            transform: scale(1.02);
+            box-shadow: 10px 10px 20px rgb(0, 0, 0);
+            transition: all 0.3s;
+          }
+       .quotOpp
+       {
+        width: 95%;
+        height: 20%;
+        /* background-color: #a13636; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       }
+           .quotOpp button
+           {
+            width: 100px;
+            height: 50px;
+            background-color: #2ba313;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+           }
+           .quotOpp button:hover
+           {
+            background-color: #32a836;
+            transition: 0.3s;
+            transform: scale(1.02);
+            box-shadow: 10px 10px 20px rgb(0, 0, 0);
+           }
+            .quotOpp :nth-child(2)
+            {
+                background-color: #dd8501;
+            }
+            .quotOpp :nth-child(2):hover
+            {
+                background-color: #bd9739;
+                transform: scale(1.02);
+                box-shadow: 10px 10px 20px rgb(0, 0, 0);
+                transition: all 0.3s;
+            }
+            .quotOpp :nth-child(3)
+            {
+                background-color: #da0000;
+            }
+            .quotOpp :nth-child(3):hover
+            {
+              background-color: #c22525;
+                transform: scale(1.02);
+                box-shadow: 10px 10px 20px rgb(0, 0, 0);
+                transition: all 0.3s;
+            }
+            .quotOpp :nth-child(4)
+            {
+                background-color: #0f00da;
+            }
+            .quotOpp :nth-child(4):hover
+            {
+              background-color: #271db3;
+                transform: scale(1.02);
+                box-shadow: 10px 10px 20px rgb(0, 0, 0);
+                transition: all 0.3s;
+            }
+            .quotOpp :nth-child(5)
+            {
+                background-color: #484946;
+            }
+            .quotOpp :nth-child(5):hover
+            {
+              background-color: #5b5c58;
+                transform: scale(1.02);
+                box-shadow: 10px 10px 20px rgb(0, 0, 0);
+                transition: all 0.3s;
+            }
+    .favBox
+    {
+        width:70%;
+        height: 60%;
+        background-color: #ffffff73;
+        border-radius: 10px;
+        display: block;
+        overflow: hidden;
+        overflow-y: scroll;
+        display: none;
+        position: absolute;
+    }
+    .favBox::-webkit-scrollbar {
+        width: 10px;
+        /* background-color: #333; */
+      }
+      
+      .favBox::-webkit-scrollbar-thumb {
+        background-color: #666;
+        border-radius: 10px;
+      }
+      
+      .favBox::-webkit-scrollbar-thumb:hover {
+        background-color: #888;
+      }
+      
+      .favBox::-webkit-scrollbar-track {
+        /* background-color: #444; */
+        border-radius: 10px;
+        margin-block: .5rem;
+      }
+        .favLine
+        {
+           width: 95%;
+           height: 40%;
+           /* background-color: #072eaf; */
+           border-radius: 10px;
+           display: flex;
+           align-items: center;
+           justify-content: space-around;
+           margin: 20px 20px;
+        }
+            .favBox h2
+            {
+                text-align: center;
+                font-weight: bolder;
+                font-size: 2rem;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin: 20px 0;
+            }
+            .favQuote
+            {
+                width: 80%;
+                height: 100%;
+                background-color: #ffffff;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                /* padding: 20px; */
+            }
+                .favQuote p
+                {
+                  font-size: 15px;
+                  color: #020202;
+                  font-weight: bold;
+                  padding: 10px 20px;
+                  /* margin-bottom: 20px; */
+                  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+                .favQuote h3
+                {
+                  font-size: 20px;
+                  text-align: end;
+                  color: #000000;
+                  font-weight: bold;
+                  padding: 10px 20px;
+                  /* margin-bottom: 10px; */
+                  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+                .remove
+                {
+                    width: 10%;
+                }
+                .remove button
+                {
+                    background-color: #a70000;
+                    color: #fff;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    padding: 10px 20px;
+                   margin-left: 10px;
+                }
+                .remove button:hover
+                {
+                  background-color: #af1212;
+                  transform: scale(1.02);
+                  box-shadow: 10px 10px 20px rgb(0, 0, 0);
+                  transition: all 0.3s;
+                }
+    .trashBox
+    {
+        width:70%;
+        height: 60%;
+        background-color: #ffffff73;
+        border-radius: 10px;
+        display: none;
+        overflow: hidden;
+        overflow-y: scroll;
+        position: absolute;
+    }
+    #trashBackBtn, #favBackBtn
+    {
+        width: 100px;
+        height: 50px;
+        background-color: #2ba313;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: 45%;
+        /* transform: translate(-50%); */
+    }
+    #trashBackBtn:hover, #favBackBtn:hover
+    {
+        background-color: #32a836;
+        transform: scale(1.02);
+        box-shadow: 10px 10px 20px rgb(0, 0, 0);
+        transition: all 0.3s;
+    }
+    .trashBox::-webkit-scrollbar {
+        width: 10px;
+        /* background-color: #333; */
+      }
+      
+      .trashBox::-webkit-scrollbar-thumb {
+        background-color: #666;
+        border-radius: 10px;
+      }
+      
+      .trashBox::-webkit-scrollbar-thumb:hover {
+        background-color: #888;
+      }
+      
+      .trashBox::-webkit-scrollbar-track {
+        /* background-color: #444; */
+        border-radius: 10px;
+        margin-block: .5rem;
+      }
+        .trashLine
+        {
+           width: 90%;
+           height: 40%;
+           /* background-color: #072eaf; */
+           border-radius: 10px;
+           display: flex;
+           align-items: center;
+           justify-content: space-around;
+           margin: 20px 10px;
+        }
+            .trashBox h2
+            {
+                text-align: center;
+                font-weight: bolder;
+                font-size: 2rem;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                margin: 20px 0;
+            }
+            .trashQuote
+            {
+                width: 80%;
+                height: 70%;
+                background-color: #ffffff;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                /* padding: 20px; */
+            }
+                .trashQuote p
+                {
+                  /* font-size: 20px; */
+                  color: #020202;
+                  font-weight: bold;
+                  padding: 10px 20px;
+                  /* margin-bottom: 20px; */
+                  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+                .trashQuote h3
+                {
+                  /* font-size: 20px; */
+                  text-align: end;
+                  color: #000000;
+                  font-weight: bold;
+                  padding: 10px 20px;
+                  /* margin-bottom: 10px; */
+                  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                }
+                .remove
+                {
+                    width: 10%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                }
+                .remove button
+                {
+                    background-color: #a70000;
+                    color: #fff;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    padding: 10px 20px;
+                   margin-left: 10px;
+                }
+                .remove button:hover
+                {
+                  background-color: #af1212;
+                  transform: scale(1.02);
+                  box-shadow: 10px 10px 20px rgb(0, 0, 0);
+                  transition: all 0.3s;
+                }
+                .remove :nth-child(2)
+                {
+                    background-color: #1e9700;
+                }
+                .remove :nth-child(2):hover
+                {
+                  background-color: #29b032;
+                  transform: scale(1.02);
+                  box-shadow: 10px 10px 20px rgb(0, 0, 0);
+                  transition: all 0.3s;
+                }
+
+                

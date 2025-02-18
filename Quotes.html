@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Generator</title>
+    <link rel="stylesheet" href="./Quotes.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <main class="main" id="particles-js">
+        <h1 class="title">Quote Generator</h1>
+        <div class="quotBox" id="quoteBox">
+            <div class="quotContent" id="quoteBG">
+                <p id="quote"></p>
+                <h3 id="person"></h3>
+                <button id="likeBtn">
+                    <span class="material-symbols-outlined">
+                    bookmark
+                    </span>
+                </button>
+            </div>
+            <div class="quotOpp">
+                <button id="nextBtn">
+                    <span class="material-symbols-outlined">
+                    arrow_forward
+                    </span>
+                </button>
+                <button id="voiceBtn">
+                    <span class="material-symbols-outlined">
+                    volume_up
+                    </span>
+                </button>
+                <button id="favBtn">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+                </button>
+                <button id="shareBtn">
+                    <span class="material-symbols-outlined">
+                    share
+                    </span>
+                </button>
+                <button id="trashBtn">
+                    <span class="material-symbols-outlined">
+                    delete
+                    </span>
+                </button>
+            </div>
+            <p class="textErr" id="textErr">this Quote is already being added</p>
+        </div>
+        <div class="favBox" id="favBox">
+            <h2>My Favorite Quotes</h2>
+            <button id="favBackBtn">
+                <span class="material-symbols-outlined">
+                undo
+                </span>
+            </button>
+            <!-- <div class="favLine" id="favLine">
+                <div class="favQuote">
+                    <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod cupiditate dolore, quaerat voluptas, corporis, quidem fugit ad expedita harum reprehenderit libero aperiam quo reiciendis sit numquam. Fugiat unde illum vitae!"</p>
+                    <h3>-Rafik kcm-</h3>
+                </div>
+                <div class="remove">
+                    <button id="removeBtn">
+                        <span class="material-symbols-outlined">
+                            delete_sweep
+                        </span>
+                    </button>
+                    <button id="restorehBtn">
+                        <span class="material-symbols-outlined">
+                            restore_from_trash
+                        </span>
+                    </button>
+                </div>
+            </div> -->
+        </div>
+        <div class="trashBox" id="trashBox">
+            <h2>Trash Quotes</h2>
+            <button id="trashBackBtn">
+                <span class="material-symbols-outlined">
+                undo
+                </span>
+            </button>
+            <!-- <div class="trashLine" id="trashLine">
+                <div class="trashQuote">
+                    <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod cupiditate dolore, quaerat voluptas, corporis, quidem fugit ad expedita harum reprehenderit libero aperiam quo reiciendis sit numquam. Fugiat unde illum vitae!"</p>
+                    <h3>-Rafik kcm-</h3>
+                </div>
+                <div class="remove">
+                    <button id="removeBtn">Remove</button>
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <script src="./Quotes.js"></script>
+    <script src="./particles.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
